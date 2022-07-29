@@ -1,10 +1,20 @@
 import { Component } from '@angular/core';
-
+import { Product } from './models/product.model';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'my-store';
+  imgParent = 'https://www.w3schools.com/howto/img_avatar.png';
+  showImage = true
+
+
+  onLoaded(event:string){
+    console.log("log padre",event)
+  }
+
+  toggleImg(){
+    this.showImage = !this.showImage
+  }
 }
